@@ -73,7 +73,7 @@ class ProfileScreenState extends State<ProfileScreen> {
         children: [
           const Text('Dark Mode'),
           Switch(
-            value: widget.user.darkMode,
+            value: Provider.of<ProfileManager>(context).darkMode,
             onChanged: (value) {
               Provider.of<ProfileManager>(context, listen: false).darkMode =
                   value;

@@ -33,9 +33,9 @@ class LoginScreen extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 16),
-              buildTextfield(username ?? '🍔 username'),
+              buildTextfield(false, username ?? '🍔 username'),
               const SizedBox(height: 16),
-              buildTextfield('🎹 password'),
+              buildTextfield(true, '🎹 password'),
               const SizedBox(height: 16),
               buildButton(context),
             ],
@@ -65,9 +65,9 @@ class LoginScreen extends StatelessWidget {
     );
   }
 
-  Widget buildTextfield(String hintText) {
+  Widget buildTextfield(bool obsc, String hintText) {
     return TextField(
-      // obscureText: true,
+      obscureText: obsc,
       cursorColor: rwColor,
       decoration: InputDecoration(
         border: const OutlineInputBorder(
