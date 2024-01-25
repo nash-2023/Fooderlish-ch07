@@ -98,6 +98,7 @@ class AppRouter {
         ],
       ),
     ],
+
     errorPageBuilder: (context, state) {
       return MaterialPage(
         key: state.pageKey,
@@ -124,7 +125,6 @@ class AppRouter {
       if (!loggedIn) {
         return loggingIn ? null : '/login';
       }
-      ;
 // 4
       final isOnboardingComplete = appStateManager.isOnboardingComplete;
 // 5

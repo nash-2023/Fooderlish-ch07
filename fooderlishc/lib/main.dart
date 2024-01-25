@@ -14,9 +14,7 @@ void main() async {
 
 class Fooderlich extends StatefulWidget {
   final AppStateManager appStateManager;
-
   const Fooderlich({super.key, required this.appStateManager});
-
   @override
   FooderlichState createState() => FooderlichState();
 }
